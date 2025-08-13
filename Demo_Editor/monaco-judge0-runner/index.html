@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Monaco Editor + Judge0 Runner</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.45.0/min/vs/loader.min.js"></script>
+</head>
+<body>
+    <h1>Monaco Editor + Judge0 API</h1>
+
+    <select id="languageSelect">
+        <option value="71" data-mode="python">Python</option>
+        <option value="63" data-mode="javascript">JavaScript</option>
+        <option value="54" data-mode="cpp">C++</option>
+        <option value="62" data-mode="java">Java</option>
+        <option value="50" data-mode="C">C</option>
+    </select>
+
+    <div id="editor"></div>
+    <button id="runBtn">▶ Run Code</button>
+    <div id="output"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
