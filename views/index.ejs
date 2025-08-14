@@ -6,21 +6,28 @@
     <title>Monaco Editor + Judge0 Runner</title>
     <link rel="stylesheet" href="style.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.45.0/min/vs/loader.min.js"></script>
+    <script>
+        const defaultLanguage = "<%= lang %>";
+    </script>
 </head>
 <body>
-    <h1>Monaco Editor + Judge0 API</h1>
-
-    <select id="languageSelect">
+    <!-- <h1>Monaco Editor + Judge0 API</h1> -->
+    <div id="container">
+        <div class="lanSel">
+        <select id="languageSelect">
         <option value="71" data-mode="python">Python</option>
         <option value="63" data-mode="javascript">JavaScript</option>
         <option value="54" data-mode="cpp">C++</option>
         <option value="62" data-mode="java">Java</option>
         <option value="50" data-mode="C">C</option>
-    </select>
+       
+    </select> </div>
+        <div id="editor"></div>
+        <div id="output" style="height: 45vh; width: 100%;">Output here</div>
+        <button id="runBtn">▶ Run Code</button>
+    </div>
 
-    <div id="editor"></div>
-    <button id="runBtn">▶ Run Code</button>
-    <div id="output"></div>
+    
 
     <script src="script.js"></script>
 </body>
