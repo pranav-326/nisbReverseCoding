@@ -2,6 +2,8 @@ import express from "express"
 import pg from "pg"
 import bodyParser from "body-parser";
 import axios from "axios";
+import dotenv from "dotenv";
+dotenv.config();
 const app=express()
 app.use(express.static("public"));
 app.use(express.json());
@@ -24,7 +26,7 @@ app.post("/run", async (req, res) => {
         }, {
         headers: {
             "Content-Type": "application/json",
-            "X-RapidAPI-Key": "your-api-key-here", 
+            "X-RapidAPI-Key": process.env.X_RapidAPI_Key, 
             "X-RapidAPI-Host": "judge0-ce.p.rapidapi.com"
             }
         })
