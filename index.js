@@ -24,7 +24,7 @@ app.post("/run", async (req, res) => {
         }, {
         headers: {
             "Content-Type": "application/json",
-            "X-RapidAPI-Key": "54159da8f4msh4f69695bc2b31e6p1415fejsn51914629da50", 
+            "X-RapidAPI-Key": "your-api-key-here", 
             "X-RapidAPI-Host": "judge0-ce.p.rapidapi.com"
             }
         })
