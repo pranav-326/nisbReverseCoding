@@ -26,11 +26,11 @@ app.post("/run", async (req, res) => {
         }, {
         headers: {
             "Content-Type": "application/json",
-            "X-RapidAPI-Key": process.env.X_RapidAPI_Key, 
+            "X-RapidAPI-Key": "54159da8f4msh4f69695bc2b31e6p1415fejsn51914629da50"||process.env.X_RapidAPI_Key, 
             "X-RapidAPI-Host": "judge0-ce.p.rapidapi.com"
             }
         })
-    // console.log("Response from Judge0:", result.data);
+    console.log("Response from Judge0:", result.data);
     output = result.data.stdout || result.data.stderr || "No output";
     res.json({ output: output });
 });

@@ -11,23 +11,44 @@
     </script>
 </head>
 <body>
-    <!-- <h1>Monaco Editor + Judge0 API</h1> -->
-    <div id="container">
-        <div class="lanSel">
-        <select id="languageSelect">
-        <option value="71" data-mode="python">Python</option>
-        <option value="63" data-mode="javascript">JavaScript</option>
-        <option value="54" data-mode="cpp">C++</option>
-        <option value="62" data-mode="java">Java</option>
-        <option value="50" data-mode="C">C</option>
-       
-    </select> </div>
-        <div id="editor"></div>
-        <div id="output" style="height: 45vh; width: 100%;">Output here</div>
-        <button id="runBtn">▶ Run Code</button>
-    </div>
+    <div id="main-container">
+        <!-- Left Section -->
+        <div id="left-panel">
+            <!-- Top Bar -->
+            <div class="top-bar">
+                <select id="languageSelect">
+                    <option value="71" data-mode="python">Python</option>
+                    <option value="63" data-mode="javascript">JavaScript</option>
+                    <option value="54" data-mode="cpp">C++</option>
+                    <option value="62" data-mode="java">Java</option>
+                    <option value="50" data-mode="C">C</option>
+                </select>
+                <button id="runBtn">Run Code ▶</button>
+            </div>
 
-    
+
+            <div id="editor"></div>
+
+            <div id="output">
+                <div class="half">
+                    <h2>Input</h2>
+                    <textarea id="input" rows="5" placeholder="Enter input here..."></textarea>
+                    <br>
+                    <button id="runTest">Run test case</button>
+                </div>
+                <div class="half">
+                    <h2>Expected Output</h2>
+                    <div class="expout">Output</div>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- Right Section -->
+        <div id="right-panel">
+            
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
